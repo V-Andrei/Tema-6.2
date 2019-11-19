@@ -10,6 +10,41 @@ namespace Tema_6._2
     {
         static void Main(string[] args)
         {
+            Student S1 = new Student("George", "Marian", "Popa", 123456789, "Brasov", 0751111111, "georgemarian@gmail.com", 3, Specialty.Speciality1, Universitiy.Uni1, Faculty.Faculty3);
+            Student S2 = new Student("Maria", "Marioara", "Traian", 232323323, "Bucuresti", 0722222222, "mariamariora@gmail.com", 4, Specialty.Speciality3, Universitiy.Uni3, Faculty.Faculty4);
+
+            Student[] students = new Student[] { S1, S2 };
+
+            Console.WriteLine("All the students are:");
+            foreach (var student in students)
+            {
+                Console.WriteLine(student);
+            }
+
+            Console.WriteLine("Is S1 == S2?");
+            Console.WriteLine(S1 == S2);
+
+            Console.WriteLine("Is S1 != S2?");
+            Console.WriteLine(S1 != S2);
+
+            Console.WriteLine("Is S1 equal to S2");
+            Console.WriteLine(S1.Equals(S2));
+
+            Console.WriteLine("S1 compared with S2");
+            Console.WriteLine(S1.CompareTo(S2));
+
+            Console.WriteLine("S1 HashCode:");
+            Console.WriteLine(S1.GetHashCode());
+            Console.WriteLine("S2 HashCode:");
+            Console.WriteLine(S2.GetHashCode());
+
+            Console.WriteLine("S1 is copied");
+            var studentS1Copy = S1.Clone();
+            
+            Console.WriteLine("Is S1 equals to copied S1?");
+            Console.WriteLine(S1.Equals(studentS1Copy));       
+
+            Console.ReadLine();
         }
     }
     class Student
