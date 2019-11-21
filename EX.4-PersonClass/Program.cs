@@ -12,4 +12,13 @@ namespace EX._4_PersonClass
         {
         }
     }
+    public class Person
+    {
+
+        // Fields
+        private string name;
+        private int age;
+
+        
+    }
 }
